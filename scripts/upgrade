@@ -116,7 +116,7 @@ ynh_add_systemd_config
 #=================================================
 
 # Add Mumble as a YunoHost service
-yunohost service add $app --description="Mumble web interface" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Mumble web client" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
