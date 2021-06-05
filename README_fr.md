@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Logiciel libre de voix sur IP (VoIP).
+Interface web interface pour voix sur IP (VoIP)
 
 **Version incluse :** 1.3.0~ynh1
 
