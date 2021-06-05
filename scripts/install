@@ -99,13 +99,12 @@ ynh_add_nginx_config
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding a configuration file..." --weight=1
+# ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-#ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
+# ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
 
-cp -rf "../conf/config.local.js" "$final_path/dist/config.local.js"
-chmod 400 "$final_path/dist/config.local.js"
-chown $app "$final_path/dist/config.local.js"
+# chmod 400 "$final_path/dist/config.local.js"
+# chown $app "$final_path/dist/config.local.js"
 
 #=================================================
 # SPECIFIC SETUP
