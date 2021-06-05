@@ -31,7 +31,7 @@
     	   {
                 "name": "domain",
                 "type": "domain",
-    	        "example": "domain.org"
+    	        "example": "example.com"
     	    },
             {
                 "name": "is_public",

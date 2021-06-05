@@ -19,7 +19,7 @@ Interface web interface pour voix sur IP (VoIP)
 
 ## Captures d'écran
 
-![](./doc/screenshots/connected.png)
+![](./doc/screenshots/screenshot.png)
 
 ## Avertissements / informations importantes
 
