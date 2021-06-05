@@ -12,9 +12,9 @@ let config = window.mumbleWebConfig // eslint-disable-line no-unused-vars
 // Which fields to show on the Connect to Server dialog
 config.connectDialog.address = false
 config.connectDialog.port = false
-config.connectDialog.token = false
+config.connectDialog.token = true
 // config.connectDialog.username = true
-// config.connectDialog.password = true
+config.connectDialog.password = false
 // config.connectDialog.channelName = false
 
 // Default values for user settings
