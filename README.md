@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Low-latency, high quality voice chat software (VoIP).
 
-**Shipped version:** 1.3.0~ynh2
+**Shipped version:** 1.3.0~ynh1
 
 
 
@@ -32,8 +32,8 @@ Low-latency, high quality voice chat software (VoIP).
 ## Documentation and resources
 
 * Official app website: https://mumble.info
-* Official admin documentation: https://wiki.mumble.info/wiki/Main_Page
-* Upstream app code repository: https://github.com/mumble-voip/mumble
+* Official admin documentation: https://github.com/Johni0702/mumble-web/
+* Upstream app code repository: https://github.com/Johni0702/mumble-web/
 * YunoHost documentation for this app: https://yunohost.org/app_mumble-web
 * Report a bug: https://github.com/YunoHost-Apps/mumble-web_ynh/issues
 
