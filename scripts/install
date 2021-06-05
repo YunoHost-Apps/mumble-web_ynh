@@ -93,8 +93,18 @@ chown -R $app:www-data "$final_path"
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 
-# Create a dedicated nginx config
+# Create a dedicated NGINX config
 ynh_add_nginx_config
+
+#=================================================
+# ADD A CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
+
+ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
+
+chmod 400 "$final_path/dist/config.local.js"
+chown $app "$final_path/dist/config.local.js"
 
 #=================================================
 # SPECIFIC SETUP
@@ -126,7 +136,6 @@ ynh_add_systemd_config
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-# Add Mumble as a YunoHost service
 yunohost service add $app --description="Mumble web interface" --log="/var/log/$app/$app.log"
 
 #=================================================
@@ -134,7 +143,7 @@ yunohost service add $app --description="Mumble web interface" --log="/var/log/$
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=3
 
-ynh_systemd_action --service_name=$app --action=restart --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action=restart --log_path="systemd"
 
 #=================================================
 # SETUP SSOWAT
@@ -153,27 +162,6 @@ fi
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
-
-#=================================================
-# SEND README TO ADMIN
-#=================================================
-
-# message="
-# Port                   : $port
-# Password to join server: $server_password
-# SuperUser Password     : $su_passwd
-# Welcome text           : $welcometext
-# Root channel (your Mumble server name): $registername
-# Final path (where to find your files) : $final_path
-# Mumble configuration file             : $final_path/mumble-server.ini
-
-# Note about config file: this package will regenerate the config file on upgrade.
-# If you changed it manually and upgrade Mumble, you'll find a backup in $final_path.
-
-# Are you facing an issue, want to improve this app or say thank you?
-# Please open a new issue in this project: https://github.com/YunoHost-Apps/mumbleserver_ynh
-# "
-# ynh_send_readme_to_admin "$message"
 
 #=================================================
 # END OF SCRIPT

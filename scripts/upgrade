@@ -83,10 +83,10 @@ ynh_system_user_create --username="$app" --home_dir="$final_path"
 
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
-	ynh_script_progression --message="Upgrading source files..." --time --weight=1
+	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path"
+	ynh_setup_source --dest_dir="$final_path" --keep="$final_path/dist/config.local.js"
 fi
 
 chmod 750 "$final_path"
@@ -106,8 +106,7 @@ ynh_add_nginx_config
 #=================================================
 ynh_script_progression --message="Upgrading dependencies..." --weight=1
 
-# Install Mumble Debian package via apt
-ynh_exec_warn_less ynh_install_app_dependencies $pkg_dependencies
+ynh_install_app_dependencies $pkg_dependencies
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
@@ -134,7 +133,7 @@ yunohost service add $app --description="Mumble web interface" --log="/var/log/$
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name="$app" --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name="$app" --action="start" --log_path="systemd"
 
 #=================================================
 # RELOAD NGINX
@@ -142,29 +141,6 @@ ynh_systemd_action --service_name="$app" --action="start" --log_path="/var/log/$
 ynh_script_progression --message="Reloading NGINX web server..." --weight=2
 
 ynh_systemd_action --service_name=nginx --action=reload
-
-#=================================================
-# SEND README TO ADMIN
-#=================================================
-
-# message="
-# Mumble server was updated!
-
-# Port                   : $port
-# Password to join server: $server_password
-# SuperUser Password     : $su_passwd
-# Welcome text           : $welcometext
-# Root channel (your mumble server name): $registername
-# Final path (where to find your files) : $final_path
-# Mumble configuration file             : $final_path/mumble-server.ini
-
-# Note about config file: this package will regenerate the config file on upgrade.
-# If you changed it manually and upgrade mumble, you'll find a backup in $final_path.
-
-# Are you facing an issue, want to improve this app or say thank you?
-# Please open a new issue in this project: https://github.com/YunoHost-Apps/mumbleserver_ynh
-# "
-# ynh_send_readme_to_admin "$message"
 
 #=================================================
 # END OF SCRIPT
