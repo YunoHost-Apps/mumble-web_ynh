@@ -10,9 +10,9 @@ let config = window.mumbleWebConfig // eslint-disable-line no-unused-vars
 
 
 // Which fields to show on the Connect to Server dialog
-// config.connectDialog.address : 'true'
-// config.connectDialog.port : 'true'
-// config.connectDialog.token : 'true'
+config.connectDialog.address : 'false'
+config.connectDialog.port : 'false'
+config.connectDialog.token : 'false'
 // config.connectDialog.username : 'true'
 // config.connectDialog.password : 'true'
 // config.connectDialog.channelName : 'false'
@@ -40,4 +40,4 @@ let config = window.mumbleWebConfig // eslint-disable-line no-unused-vars
 // config.defaults.avatarurl : '' // download and set the user's Mumble avatar to the image at this URL
 
 // General
-// config.defaults.theme : 'MetroMumbleLight'
+config.defaults.theme : 'MetroMumbleDark'
