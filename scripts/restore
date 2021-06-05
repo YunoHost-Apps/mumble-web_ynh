@@ -37,23 +37,22 @@ ynh_webpath_available --domain=$domain --path_url=$path_url \
 test ! -d $final_path \
 	|| ynh_die --message="There is already a directory: $final_path "
 
-
 #=================================================
 # STANDARD RESTORATION STEPS
 #=================================================
 # RESTORE THE NGINX CONFIGURATION
 #=================================================
+ynh_script_progression --message="Restoring the NGINX configuration..." --weight=1
 
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
 #=================================================
 # RECREATE THE DEDICATED USER
 #=================================================
-
 ynh_script_progression --message="Recreating the dedicated system user..." --weight=1
 
 # Create the dedicated user (if not existing)
-ynh_system_user_create --username="$app" --home_dir="$final_path"
+ynh_system_user_create --username=$app --home_dir="$final_path"
 
 #=================================================
 # RESTORE THE APP MAIN DIR
@@ -61,6 +60,10 @@ ynh_system_user_create --username="$app" --home_dir="$final_path"
 ynh_script_progression --message="Restoring the app main directory..." --weight=2
 
 ynh_restore_file --origin_path="$final_path"
+
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
 
 #=================================================
 # REINSTALL DEPENDENCIES
@@ -73,6 +76,14 @@ ynh_install_app_dependencies $pkg_dependencies
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
 #=================================================
+# RESTORE SYSTEMD
+#=================================================
+ynh_script_progression --message="Restoring the systemd configuration..." --weight=1
+
+ynh_restore_file --origin_path="/etc/systemd/system/$app.service"
+systemctl enable $app.service --quiet
+
+#=================================================
 # ADVERTISE SERVICE IN ADMIN PANEL
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
@@ -81,19 +92,11 @@ ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 yunohost service add $app --description="Mumble web interface" --log="/var/log/$app/$app.log"
 
 #=================================================
-# RESTORE SYSTEMD
-#=================================================
-ynh_script_progression --message="Restoring the systemd configuration..." --weight=1
-
-ynh_restore_file --origin_path="/etc/systemd/system/$app.service"
-systemctl enable "$app.service" --quiet
-
-#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name="$app" --action="start" --log_path="systemd"
+ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
 
 #=================================================
 # GENERIC FINALIZATION
