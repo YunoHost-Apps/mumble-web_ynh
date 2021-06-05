@@ -34,7 +34,7 @@ Various configuration options are available for Mumble web on this configuration
 ## Documentation and resources
 
 * Official app website: https://mumble.info
-* Official admin documentation: https://github.com/Johni0702/mumble-web/
+* Official admin documentation: https://docs.framasoft.org/fr/jitsimeet/mumble.html
 * Upstream app code repository: https://github.com/Johni0702/mumble-web/
 * YunoHost documentation for this app: https://yunohost.org/app_mumble-web
 * Report a bug: https://github.com/YunoHost-Apps/mumble-web_ynh/issues
