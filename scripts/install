@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# doc: https://wiki.mumble.info/wiki/Running_Murmur
-
 #=================================================
 # GENERIC START
 #=================================================
@@ -28,9 +26,6 @@ path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
 
 app=$YNH_APP_INSTANCE_NAME
-
-server_password=$(ynh_string_random)
-su_passwd=$(ynh_string_random)
 
 #=================================================
 # CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
@@ -68,7 +63,7 @@ ynh_app_setting_set --app=$app --key=port_web --value=$port
 ynh_script_progression --message="Installing dependencies..." --weight=4
 
 # Install Mumble Debian package via apt
-ynh_exec_warn_less ynh_install_app_dependencies $pkg_dependencies
+ynh_install_app_dependencies $pkg_dependencies
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 
@@ -85,7 +80,7 @@ ynh_system_user_create --username=$app --home_dir="$final_path"
 #=================================================
 ynh_script_progression --message="Installing Mumble Web..." --weight=4
 
-ynh_app_setting_set --app=$app --key=final_path --value=$
+ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$final_path"
 
@@ -106,8 +101,7 @@ ynh_add_nginx_config
 #=================================================
 # mumble server conf.ini
 #=================================================
-ynh_script_progression --message="Configuring Mumble server..." --weight=1
-
+ynh_script_progression --message="Configuring Mumble Web..." --weight=1
 
 ynh_use_nodejs
 (
@@ -130,7 +124,7 @@ ynh_add_systemd_config
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
-ynh_script_progression --message="Integrating service in YunoHost..."
+ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
 # Add Mumble as a YunoHost service
 yunohost service add $app --description="Mumble web interface" --log="/var/log/$app/$app.log"
