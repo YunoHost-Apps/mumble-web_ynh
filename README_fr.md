@@ -13,7 +13,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Logiciel libre de voix sur IP (VoIP).
 
-**Version incluse :** 1.3.0~ynh2
+**Version incluse :** 1.3.0~ynh1
 
 
 
@@ -28,8 +28,8 @@ Logiciel libre de voix sur IP (VoIP).
 ## Documentations et ressources
 
 * Site officiel de l'app : https://mumble.info
-* Documentation officielle de l'admin : https://wiki.mumble.info/wiki/Main_Page
-* Dépôt de code officiel de l'app : https://github.com/mumble-voip/mumble
+* Documentation officielle de l'admin : https://github.com/Johni0702/mumble-web/
+* Dépôt de code officiel de l'app : https://github.com/Johni0702/mumble-web/
 * Documentation YunoHost pour cette app : https://yunohost.org/app_mumble-web
 * Signaler un bug : https://github.com/YunoHost-Apps/mumble-web_ynh/issues
 
