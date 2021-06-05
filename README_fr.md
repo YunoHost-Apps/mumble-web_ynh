@@ -25,6 +25,8 @@ Interface web interface pour voix sur IP (VoIP)
 
 ## Configuration
 
+Diverses options de configuration sont disponibles pour Mumble web sur ce fichier de configuration `/var/www/mumble-web/dist/config.local.js` 
+
 ## Documentations et ressources
 
 * Site officiel de l'app : https://mumble.info
