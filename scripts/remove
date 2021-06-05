@@ -69,14 +69,6 @@ ynh_script_progression --message="Removing NGINX web server configuration..." --
 ynh_remove_nginx_config
 
 #=================================================
-# SPECIFIC REMOVE
-#=================================================
-# REMOVE OTHER FILES
-#=================================================
-
-ynh_secure_remove --file="/var/log/$app"
-
-#=================================================
 # GENERIC FINALIZATION
 #=================================================
 # REMOVE DEDICATED USER
