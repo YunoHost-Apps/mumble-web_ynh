@@ -19,7 +19,7 @@ Web interface for voice chat software (VoIP)
 
 **Shipped version:** 1.3.0~ynh1
 
-
+**Demo:** https://web.mumble.framatalk.org/
 
 ## Screenshots
 
@@ -27,9 +27,13 @@ Web interface for voice chat software (VoIP)
 
 ## Disclaimers / important information
 
-#### Setup
+## Setup
 
 Various configuration options are available for Mumble web on this configuration file `/var/www/mumble-web/dist/config.local.js`
+
+### Documentation
+
+- Framasoft documentation: https://docs.framasoft.org/fr/jitsimeet/mumble.html
 
 ## Documentation and resources
 
