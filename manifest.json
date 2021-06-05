@@ -11,7 +11,7 @@
     "upstream": {
         "license": "BSD-3-Clause",
         "website": "https://mumble.info",
-        "admindoc": "https://github.com/Johni0702/mumble-web/",
+        "admindoc": "https://docs.framasoft.org/fr/jitsimeet/mumble.html",
         "code": "https://github.com/Johni0702/mumble-web/"
     },
     "license": "BSD-3-Clause",
