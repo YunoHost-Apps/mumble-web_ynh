@@ -23,7 +23,7 @@ Web interface for voice chat software (VoIP)
 
 ## Screenshots
 
-![](./doc/screenshots/connected.png)
+![](./doc/screenshots/screenshot.png)
 
 ## Disclaimers / important information
 
