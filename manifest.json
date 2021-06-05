@@ -3,8 +3,8 @@
     "id": "mumble-web",
     "packaging_format": 1,
     "description": {
-        "en": "Low-latency, high quality voice chat software (VoIP).",
-        "fr": "Logiciel libre de voix sur IP (VoIP)."
+        "en": "Web interface for voice chat software (VoIP)",
+        "fr": "Interface web interface pour voix sur IP (VoIP)"
     },
     "version": "1.3.0~ynh1",
     "url": "https://mumble.info",
