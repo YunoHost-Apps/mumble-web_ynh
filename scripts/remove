@@ -69,12 +69,14 @@ ynh_script_progression --message="Removing NGINX web server configuration..." --
 ynh_remove_nginx_config
 
 #=================================================
-# SPECIFIC REMOVE
+# REMOVE LOGROTATE CONFIGURATION
 #=================================================
-# REMOVE OTHER FILES
-#=================================================
+ynh_script_progression --message="Removing logrotate configuration..."
 
-ynh_secure_remove "/var/log/$app"
+ynh_secure_remove --file="/var/log/$app"
+
+# Remove the app-specific logrotate config
+ynh_remove_logrotate
 
 #=================================================
 # GENERIC FINALIZATION

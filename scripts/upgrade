@@ -126,6 +126,14 @@ ynh_add_systemd_config
 yunohost service add $app --description="Mumble web interface" --log="/var/log/$app/$app.log"
 
 #=================================================
+# SETUP LOGROTATE
+#=================================================
+ynh_script_progression --message="Upgrading logrotate configuration..." --weight=1
+
+# Use logrotate to manage app-specific logfile(s)
+ynh_use_logrotate --non-append --specific_user=$app/$app
+
+#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1

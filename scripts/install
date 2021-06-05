@@ -122,6 +122,28 @@ ynh_use_nodejs
 	ls -lah
 )
 
+# chown -R $app $final_path
+
+# pushd $final_path
+# 	ynh_use_nodejs
+# 	ynh_exec_warn_less ynh_exec_as "$app" PATH="$nodejs_path:$PATH" "$nodejs_path/npm" install --save --loglevel warn
+# 	ynh_exec_warn_less ynh_exec_as "$app" PATH="$nodejs_path:$PATH" "$nodejs_path/npm" run build
+# 	ls -lah
+# popd
+
+#=================================================
+# HANDLE LOG FILES AND LOGROTATE
+#=================================================
+ynh_script_progression --message="Configuring log rotation..."
+
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown -R $app /var/log/$app
+
+# Setup logrotate
+ynh_use_logrotate --specific_user=$app/$app
+
 #=================================================
 # SETUP SYSTEMD
 #=================================================
