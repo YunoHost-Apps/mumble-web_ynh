@@ -11,7 +11,8 @@
     "upstream": {
         "license": "BSD-3-Clause",
         "website": "https://mumble.info",
-        "admindoc": "https://github.com/Johni0702/mumble-web/",
+        "demo": "https://web.mumble.framatalk.org/",
+        "admindoc": "https://docs.framasoft.org/fr/jitsimeet/mumble.html",
         "code": "https://github.com/Johni0702/mumble-web/"
     },
     "license": "BSD-3-Clause",
@@ -31,7 +32,7 @@
     	   {
                 "name": "domain",
                 "type": "domain",
-    	        "example": "domain.org"
+    	        "example": "example.com"
     	    },
             {
                 "name": "is_public",

@@ -15,7 +15,7 @@ Interface web interface pour voix sur IP (VoIP)
 
 **Version incluse :** 1.3.0~ynh1
 
-
+**Démo :** https://web.mumble.framatalk.org/
 
 ## Captures d'écran
 
@@ -25,10 +25,16 @@ Interface web interface pour voix sur IP (VoIP)
 
 ## Configuration
 
+Diverses options de configuration sont disponibles pour Mumble web sur ce fichier de configuration `/var/www/mumble-web/dist/config.local.js` 
+
+## Documentation
+
+- documentation Framasoft : https://docs.framasoft.org/fr/jitsimeet/mumble.html
+
 ## Documentations et ressources
 
 * Site officiel de l'app : https://mumble.info
-* Documentation officielle de l'admin : https://github.com/Johni0702/mumble-web/
+* Documentation officielle de l'admin : https://docs.framasoft.org/fr/jitsimeet/mumble.html
 * Dépôt de code officiel de l'app : https://github.com/Johni0702/mumble-web/
 * Documentation YunoHost pour cette app : https://yunohost.org/app_mumble-web
 * Signaler un bug : https://github.com/YunoHost-Apps/mumble-web_ynh/issues

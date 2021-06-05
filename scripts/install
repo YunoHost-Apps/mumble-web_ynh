@@ -78,7 +78,7 @@ ynh_system_user_create --username=$app --home_dir="$final_path"
 #=================================================
 # INSTALL Mumble-web
 #=================================================
-ynh_script_progression --message="Installing Mumble Web..." --weight=4
+ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
@@ -91,27 +91,17 @@ chown -R $app:www-data "$final_path"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --weight=1
+ynh_script_progression --message="Configuring NGINX web server..." --weight=4
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
-
-#=================================================
-# ADD A CONFIGURATION
-#=================================================
-# ynh_script_progression --message="Adding a configuration file..." --weight=1
-
-# ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
-
-# chmod 400 "$final_path/dist/config.local.js"
-# chown $app "$final_path/dist/config.local.js"
 
 #=================================================
 # SPECIFIC SETUP
 #=================================================
 # mumble server conf.ini
 #=================================================
-ynh_script_progression --message="Configuring Mumble Web..." --weight=1
+ynh_script_progression --message="Configuring Mumble web client..." --weight=1
 
 ynh_use_nodejs
 (
@@ -121,6 +111,16 @@ ynh_use_nodejs
 	ynh_exec_warn_less ynh_exec_as "$app" PATH="$nodejs_path:$PATH" "$nodejs_path/npm" run build
 	ls -lah
 )
+
+#=================================================
+# ADD A CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
+
+ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
+
+chmod 400 "$final_path/dist/config.local.js"
+chown $app "$final_path/dist/config.local.js"
 
 #=================================================
 # SETUP SYSTEMD
@@ -136,7 +136,7 @@ ynh_add_systemd_config
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-yunohost service add $app --description="Mumble web interface" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Mumble web client" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
