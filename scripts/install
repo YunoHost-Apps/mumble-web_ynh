@@ -97,16 +97,6 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 ynh_add_nginx_config
 
 #=================================================
-# ADD A CONFIGURATION
-#=================================================
-# ynh_script_progression --message="Adding a configuration file..." --weight=1
-
-# ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
-
-# chmod 400 "$final_path/dist/config.local.js"
-# chown $app "$final_path/dist/config.local.js"
-
-#=================================================
 # SPECIFIC SETUP
 #=================================================
 # mumble server conf.ini
@@ -121,6 +111,16 @@ ynh_use_nodejs
 	ynh_exec_warn_less ynh_exec_as "$app" PATH="$nodejs_path:$PATH" "$nodejs_path/npm" run build
 	ls -lah
 )
+
+#=================================================
+# ADD A CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
+
+ynh_add_config --template="../conf/config.local.js" --destination="$final_path/dist/config.local.js"
+
+chmod 400 "$final_path/dist/config.local.js"
+chown $app "$final_path/dist/config.local.js"
 
 #=================================================
 # SETUP SYSTEMD
