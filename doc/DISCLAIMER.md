@@ -6,4 +6,5 @@
 
 ## Documentation
 
+- Murmur documentation: https://wiki.mumble.info/wiki/Murmurguide
 - Framasoft documentation: https://docs.framasoft.org/fr/jitsimeet/mumble.html
