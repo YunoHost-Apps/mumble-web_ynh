@@ -31,6 +31,7 @@ Interface web interface pour voix sur IP (VoIP)
 
 ## Documentation
 
+- Documentation Murmur : https://wiki.mumble.info/wiki/Murmurguide
 - Documentation Framasoft : https://docs.framasoft.org/fr/jitsimeet/mumble.html
 
 ## Documentations et ressources
