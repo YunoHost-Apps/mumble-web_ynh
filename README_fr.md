@@ -13,7 +13,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Interface web interface pour voix sur IP (VoIP)
 
-**Version incluse :** 1.3.0~ynh1
+**Version incluse :** 1.3.0~ynh2
 
 **Démo :** https://web.mumble.framatalk.org/
 
@@ -31,6 +31,7 @@ Interface web interface pour voix sur IP (VoIP)
 
 ## Documentation
 
+- Documentation Murmur : https://wiki.mumble.info/wiki/Murmurguide
 - Documentation Framasoft : https://docs.framasoft.org/fr/jitsimeet/mumble.html
 
 ## Documentations et ressources

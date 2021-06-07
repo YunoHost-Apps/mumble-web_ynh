@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Web interface for voice chat software (VoIP)
 
-**Shipped version:** 1.3.0~ynh1
+**Shipped version:** 1.3.0~ynh2
 
 **Demo:** https://web.mumble.framatalk.org/
 
@@ -35,6 +35,7 @@ Web interface for voice chat software (VoIP)
 
 ## Documentation
 
+- Murmur documentation: https://wiki.mumble.info/wiki/Murmurguide
 - Framasoft documentation: https://docs.framasoft.org/fr/jitsimeet/mumble.html
 
 ## Documentation and resources
