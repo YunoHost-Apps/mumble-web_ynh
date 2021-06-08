@@ -27,6 +27,14 @@ is_public=$YNH_APP_ARG_IS_PUBLIC
 
 app=$YNH_APP_INSTANCE_NAME
 
+if [ ${PACKAGE_CHECK_EXEC:-0} -eq 1 ]; then
+	:
+else
+	if [ ! -f /etc/systemd/system/mumbleserver.service ]; then
+    	ynh_die --message="In order to install Mumlble-web client you must install Mumble-server first"
+	fi
+fi
+
 #=================================================
 # CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
 #=================================================
