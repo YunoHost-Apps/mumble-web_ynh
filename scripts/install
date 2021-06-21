@@ -31,7 +31,7 @@ if [ ${PACKAGE_CHECK_EXEC:-0} -eq 1 ]; then
 	:
 else
 	if [ ! -f /etc/systemd/system/mumbleserver.service ]; then
-    	ynh_die --message="In order to install Mumlble-web client you must install Mumble-server first"
+    	ynh_die --message="In order to use Mumlble-web client you must install Mumble-server first"
 	fi
 fi
 
