@@ -13,9 +13,9 @@ let config = window.mumbleWebConfig // eslint-disable-line no-unused-vars
 config.connectDialog.address = false
 config.connectDialog.port = false
 config.connectDialog.token = true
-// config.connectDialog.username = true
+config.connectDialog.username = true
 config.connectDialog.password = false
-// config.connectDialog.channelName = false
+config.connectDialog.channelName = false
 
 // Default values for user settings
 // You can see your current value by typing `localStorage.getItem('mumble.$setting')` in the web console.
