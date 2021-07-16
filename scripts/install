@@ -110,7 +110,7 @@ popd
 export PATH="$PATH:$final_path/.cargo/bin:$final_path/.local/bin:/usr/local/sbin" 
 
 # Compile vaultwarden
-pushd "$final_path"/build
+pushd "$final_path"
 	ynh_exec_warn_less sudo -u "$app" env PATH="$PATH" cargo build --release
 popd
 
