@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/Johni0702/mumble-web/archive/4ef594c8a097d180700d22d91e9a7fea3bab08ac.tar.gz
-SOURCE_SUM=27ced80fc7a3035af531226658903ecd8a18881e045ebb5684d0a503ef67fb1d
+SOURCE_URL=https://github.com/Johni0702/mumble-web-proxy/archive/cfae6178c70c1436186f16723b18a2cbb0f06138.tar.gz
+SOURCE_SUM=2a0cda55ae13b3f9cbcda2c91b2e854bbdcaaa486d020ccc1428c0ba5ab10dd9
 SOURCE_SUM_PRG=sha256sum
 ARCH_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true

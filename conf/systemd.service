@@ -13,3 +13,5 @@ ExecStart=/usr/bin/websockify --web=__FINALPATH__/dist/ --ssl-target 127.0.0.1:_
 
 [Install]
 WantedBy=multi-user.target
+
+mumble-web-proxy --listen-ws 64737 --server mumbleserver:64738 --ice-port-min 20000 --ice-port-max --ice-ipv4 1.2.3.4 --ice-ipv6 1:2:3:4:5::6
