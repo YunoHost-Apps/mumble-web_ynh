@@ -15,7 +15,8 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-Web interface for voice chat software (VoIP)
+mumble-web is an HTML5 Mumble client for use in modern browsers.
+The Mumble protocol uses TCP for control and UDP for voice. Running in a browser, both are unavailable to this client. Instead Websockets are used for control and WebRTC is used for voice (using Websockets as fallback if the server does not support WebRTC).
 
 **Shipped version:** 1.3.0~ynh3
 
