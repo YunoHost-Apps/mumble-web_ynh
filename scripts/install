@@ -27,6 +27,9 @@ is_public=$YNH_APP_ARG_IS_PUBLIC
 
 app=$YNH_APP_INSTANCE_NAME
 
+# Testing if mumbleserver is installed
+yunohost app list | grep -q "id: mumbleserver" || ynh_die "mumbleserver is needed, but it is not installed."
+
 #=================================================
 # CHECK IF THE APP CAN BE INSTALLED WITH THESE ARGS
 #=================================================
