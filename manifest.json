@@ -4,9 +4,9 @@
     "packaging_format": 1,
     "description": {
         "en": "Web interface for voice chat software (VoIP)",
-        "fr": "Interface web interface pour voix sur IP (VoIP)"
+        "fr": "Interface web pour voix sur IP (VoIP)"
     },
-    "version": "1.3.0~ynh3",
+    "version": "1.3.0~ynh4",
     "url": "https://mumble.info",
     "upstream": {
         "license": "BSD-3-Clause",
@@ -21,7 +21,7 @@
         "email": ""
     },
     "requirements": {
-        "yunohost": ">= 4.2.4"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
@@ -31,8 +31,7 @@
         "install" : [
     	   {
                 "name": "domain",
-                "type": "domain",
-    	        "example": "example.com"
+                "type": "domain"
     	    },
             {
                 "name": "is_public",
