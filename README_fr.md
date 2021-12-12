@@ -33,7 +33,6 @@ Le protocole Mumble utilise TCP pour le contrôle et UDP pour la voix. Fonctionn
 ## Documentation
 
 - Documentation Murmur : https://wiki.mumble.info/wiki/Murmurguide
-- Documentation Framasoft : https://docs.framasoft.org/fr/jitsimeet/mumble.html
 
 ## Documentations et ressources
 
