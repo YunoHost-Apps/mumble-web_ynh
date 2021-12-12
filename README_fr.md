@@ -38,7 +38,6 @@ Le protocole Mumble utilise TCP pour le contrôle et UDP pour la voix. Fonctionn
 ## Documentations et ressources
 
 * Site officiel de l'app : https://mumble.info
-* Documentation officielle de l'admin : https://docs.framasoft.org/fr/jitsimeet/mumble.html
 * Dépôt de code officiel de l'app : https://github.com/Johni0702/mumble-web/
 * Documentation YunoHost pour cette app : https://yunohost.org/app_mumble-web
 * Signaler un bug : https://github.com/YunoHost-Apps/mumble-web_ynh/issues
