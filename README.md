@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # Mumble Web for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/mumble-web.svg)](https://dash.yunohost.org/appci/app/mumble-web) ![Working status](https://ci-apps.yunohost.org/ci/badges/mumble-web.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/mumble-web.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/mumble-web.svg)](https://dash.yunohost.org/appci/app/mumble-web) ![Working status](https://ci-apps.yunohost.org/ci/badges/mumble-web.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/mumble-web.maintain.svg)
+
 [![Install Mumble Web with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=mumble-web)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -19,7 +20,6 @@ mumble-web is an HTML5 Mumble client for use in modern browsers.
 The Mumble protocol uses TCP for control and UDP for voice. Running in a browser, both are unavailable to this client. Instead Websockets are used for control and WebRTC is used for voice (using Websockets as fallback if the server does not support WebRTC).
 
 **Shipped version:** 1.3.0~ynh4
-
 
 **Demo:** https://web.mumble.framatalk.org/
 
@@ -45,7 +45,7 @@ The Mumble protocol uses TCP for control and UDP for voice. Running in a browser
 * Official app website: <https://mumble.info>
 * Official admin documentation: <https://docs.framasoft.org/fr/jitsimeet/mumble.html>
 * Upstream app code repository: <https://github.com/Johni0702/mumble-web/>
-* YunoHost documentation for this app: <https://yunohost.org/app_mumble-web>
+* YunoHost Store: <https://apps.yunohost.org/app/mumble-web>
 * Report a bug: <https://github.com/YunoHost-Apps/mumble-web_ynh/issues>
 
 ## Developer info
