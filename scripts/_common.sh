@@ -4,6 +4,9 @@
 # COMMON VARIABLES
 #=================================================
 
+# dependencies used by the app
+pkg_dependencies="websockify"
+
 # NodeJS version
 nodejs_version="14"
 
