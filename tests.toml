@@ -1,0 +1,17 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/tests.v1.schema.json
+
+test_format = 1.0
+
+[default]
+
+    preinstall = """
+    yunohost tools update apps
+    yunohost domain add mumble.domain.tld
+    yunohost app install \
+        https://github.com/YunoHost-Apps/mumbleserver_ynh/tree/05ee188491d4570eb2ed64dab4ca1e7a45e44d5f \
+        -a "domain=mumble.domain.tld&welcometext=Welcome&registername=Root" \
+        --force
+
+    """
+
+    test_upgrade_from.a647bf5a79ad41f0f346c8d302890eaf3cef4db5.name = "Last packaging v1 version"
