@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install Mumble Web with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=mumble-web)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install Mumble Web quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -19,7 +19,7 @@ It shall NOT be edited by hand.
 mumble-web is an HTML5 Mumble client for use in modern browsers.
 The Mumble protocol uses TCP for control and UDP for voice. Running in a browser, both are unavailable to this client. Instead Websockets are used for control and WebRTC is used for voice (using Websockets as fallback if the server does not support WebRTC).
 
-**Shipped version:** 1.3.0~ynh4
+**Shipped version:** 1.3.0~ynh5
 
 **Demo:** <https://web.mumble.framatalk.org/>
 
