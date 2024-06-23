@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Mumble Web
+# YunoHost 上的 Mumble Web
 
 [![集成程度](https://dash.yunohost.org/integration/mumble-web.svg)](https://dash.yunohost.org/appci/app/mumble-web) ![工作状态](https://ci-apps.yunohost.org/ci/badges/mumble-web.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/mumble-web.maintain.svg)
 
@@ -26,6 +26,10 @@ The Mumble protocol uses TCP for control and UDP for voice. Running in a browser
 ## 截图
 
 ![Mumble Web 的截图](./doc/screenshots/screenshot.png)
+
+## :red_circle: 负面特征
+
+- **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
 
 ## 文档与资源
 

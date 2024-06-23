@@ -27,6 +27,10 @@ The Mumble protocol uses TCP for control and UDP for voice. Running in a browser
 
 ![Mumble Web(r)en pantaila-argazkia](./doc/screenshots/screenshot.png)
 
+## :red_circle: Ezaugarri zalantzagarriak
+
+- **Jatorrizko garapena utzita**: Software honek ez du arduradunik. Denborak aurrera egin ahala funtzionatzeari utziko dio, konpondu gabeko segurtasun arazoak izango ditu, etab.
+
 ## Dokumentazioa eta baliabideak
 
 - Aplikazioaren webgune ofiziala: <https://mumble.info>

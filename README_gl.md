@@ -27,6 +27,10 @@ The Mumble protocol uses TCP for control and UDP for voice. Running in a browser
 
 ![Captura de pantalla de Mumble Web](./doc/screenshots/screenshot.png)
 
+## :red_circle: Debes considerar
+
+- **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
+
 ## Documentación e recursos
 
 - Web oficial da app: <https://mumble.info>
