@@ -19,7 +19,7 @@ EZ editatu eskuz.
 mumble-web is an HTML5 Mumble client for use in modern browsers.
 The Mumble protocol uses TCP for control and UDP for voice. Running in a browser, both are unavailable to this client. Instead Websockets are used for control and WebRTC is used for voice (using Websockets as fallback if the server does not support WebRTC).
 
-**Paketatutako bertsioa:** 1.3.0~ynh5
+**Paketatutako bertsioa:** 1.3.0~ynh6
 
 **Demoa:** <https://web.mumble.framatalk.org/>
 

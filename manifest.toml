@@ -7,9 +7,9 @@ name = "Mumble Web"
 description.en = "Web interface for voice chat software (VoIP)"
 description.fr = "Interface web pour voix sur IP (VoIP)"
 
-version = "1.3.0~ynh5"
+version = "1.3.0~ynh6"
 
-maintainers = ["eric_G"]
+maintainers = []
 
 [upstream]
 license = "BSD-3-Clause"
