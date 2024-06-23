@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Mumble Web
+# YunoHost 上的 Mumble Web
 
 [![集成程度](https://dash.yunohost.org/integration/mumble-web.svg)](https://dash.yunohost.org/appci/app/mumble-web) ![工作状态](https://ci-apps.yunohost.org/ci/badges/mumble-web.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/mumble-web.maintain.svg)
 
@@ -19,13 +19,17 @@
 mumble-web is an HTML5 Mumble client for use in modern browsers.
 The Mumble protocol uses TCP for control and UDP for voice. Running in a browser, both are unavailable to this client. Instead Websockets are used for control and WebRTC is used for voice (using Websockets as fallback if the server does not support WebRTC).
 
-**分发版本：** 1.3.0~ynh5
+**分发版本：** 1.3.0~ynh6
 
 **演示：** <https://web.mumble.framatalk.org/>
 
 ## 截图
 
 ![Mumble Web 的截图](./doc/screenshots/screenshot.png)
+
+## :red_circle: 负面特征
+
+- **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
 
 ## 文档与资源
 
