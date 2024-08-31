@@ -19,7 +19,7 @@ admindoc = "https://docs.framasoft.org/fr/jitsimeet/mumble.html"
 code = "https://github.com/Johni0702/mumble-web/"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 11.2.29"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
