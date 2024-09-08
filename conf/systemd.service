@@ -1,5 +1,5 @@
 [Unit]
-Description=Mumble web interface (app: __APP__)
+Description=Mumble: Web interface for voice chat software 
 Documentation=https://github.com/johni0702/mumble-web
 Requires=network.target #mumbleserver.service
 After=network.target #mumbleserver.service

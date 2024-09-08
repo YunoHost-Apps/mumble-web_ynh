@@ -30,8 +30,8 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="dist/config.lo
 ynh_script_progression "Building Mumble web client..."
 
 pushd "$install_dir"
-    ynh_hide_warnings ynh_exec_as_app env "$ynh_node_load_PATH" $ynh_npm install --save --loglevel warn
-    ynh_hide_warnings ynh_exec_as_app env "$ynh_node_load_PATH" $ynh_npm run build
+    ynh_hide_warnings ynh_exec_as_app npm install --save --loglevel warn
+    ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 #=================================================
