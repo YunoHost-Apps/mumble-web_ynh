@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Mumble Web YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/mumble-web.svg)](https://dash.yunohost.org/appci/app/mumble-web) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/mumble-web.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/mumble-web.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/mumble-web.svg)](https://ci-apps.yunohost.org/ci/apps/mumble-web/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/mumble-web.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/mumble-web.maintain.svg)
 
 [![Instalatu Mumble Web YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=mumble-web)
 
@@ -19,7 +19,7 @@ EZ editatu eskuz.
 mumble-web is an HTML5 Mumble client for use in modern browsers.
 The Mumble protocol uses TCP for control and UDP for voice. Running in a browser, both are unavailable to this client. Instead Websockets are used for control and WebRTC is used for voice (using Websockets as fallback if the server does not support WebRTC).
 
-**Paketatutako bertsioa:** 1.3.0~ynh6
+**Paketatutako bertsioa:** 1.3.0~ynh7
 
 **Demoa:** <https://web.mumble.framatalk.org/>
 
